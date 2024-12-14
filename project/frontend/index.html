@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        
+        <div class="form-container">
+            <input type="text" id="titleInput" placeholder="Task Title">
+            <input type="text" id="descriptionInput" placeholder="Task Description">
+            <button id="submitBtn" onclick="createTask()">Add Task</button>
+        </div>
+
+        <!-- Add edit modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <h2>Edit Task</h2>
+                <input type="text" id="editTitleInput" placeholder="Edit Title">
+                <input type="text" id="editDescriptionInput" placeholder="Edit Description">
+                <button onclick="updateTask()">Update</button>
+                <button onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+
+        <div id="taskList" class="task-list">
+            <!-- Tasks will be added here dynamically -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
